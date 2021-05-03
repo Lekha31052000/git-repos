@@ -1,6 +1,6 @@
-const myform = document.getElementById("myform");
+const myform = document.getElementById("login");
 
-myform.addEventListener("submit", (e) => {
+myform.addEventListener("click", (e) => {
   e.preventDefault();
 
   let username = document.getElementById("username");
@@ -8,6 +8,10 @@ myform.addEventListener("submit", (e) => {
 
   let user = username.value;
   let pass = password.value;
+  if (!user || !pass) {
+    alert("Details should be filled!!");
+    return false;
+  }
   console.log(user);
   console.log(pass);
   validateUserLogin(user, pass);
@@ -37,6 +41,8 @@ function validateUserLogin(user, pass) {
 
     if (user == data.username && pass == data.password) {
       flag = 1;
+    } else {
+      alert("enter correct details");
     }
 
     if (flag === 1) {

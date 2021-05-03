@@ -16,12 +16,6 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <script>
-      window.addEventListener("submit", function () {
-        console.log("page loaded");
-        validateUserLogin();
-      });
-    </script>
   </head>
 
   <body>
@@ -44,7 +38,13 @@
           placeholder="password"
           required
         />
-        <input type="submit" class="btn btn-primary ml-2 mb-5" value="submit" />
+
+        <input
+          type="button"
+          value="SUBMIT"
+          class="btn btn-primary ml-2 mb-5"
+          id="login"
+        />
       </form>
     </section>
     <section id="second">
